@@ -72,4 +72,14 @@ class Rectangle {
         y2 = 0;
     }
 
+    void currentStateRectangle() {
+        System.out.println("x1:" + x1 + " y1:" + y1);
+        System.out.println("x2:" + x2 + " y2:" + y2);
+    }
+
+    void move(int dx, int dy) {
+    }
+
+    void minSquare() {
+    }
 }
