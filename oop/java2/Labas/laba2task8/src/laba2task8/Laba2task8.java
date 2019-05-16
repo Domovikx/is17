@@ -14,6 +14,8 @@ import java.util.Arrays;
 public class Laba2task8 {
 
     public static void main(String[] args) {
+//      8. Напишите программу, выводящую на консоль таблицу 3х5 
+//      случайных элементов (a(i,j)< 10).
         int[][] matrix = matrix(3, 5);
         showTable(matrix);
     }
