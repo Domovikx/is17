@@ -25,15 +25,19 @@ public class JavaApplication1 {
         "девять" - отображать в консоле цифру 9. (Информацию о работе со строками вы
         найдете на следующих страницах).   
          */
-        String str = scan();
-        textToNumber(str);
+        while (true) {
+            String str = scan();
+            textToNumber(str);
+            if ("exit".equals(str)) {
+                break;
+            }
+        }
     }
 
     public static String scan() {
         Scanner in = new Scanner(System.in, "Cp1251");
         System.out.print("Enter : ");
         String input = in.next();
-//        System.out.println("Your input is: " + input);
         return input;
     }
 
@@ -54,11 +58,13 @@ public class JavaApplication1 {
             String val = words.get(key);
 
             if (str.equals(val)) {
-//                System.out.println(val);
-                System.out.println("Ваше число: " + key);
+                System.out.println(" ваше число: " + key);
+                break;
+            }
+            if (str.equals(Integer.toString(key))) {
+                System.out.println(" ваше число: " + val);
                 break;
             }
         }
     }
-
 }
