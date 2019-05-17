@@ -1,6 +1,6 @@
-/*DROP DATABASE IF EXISTS online_shope;*/
+DROP DATABASE IF EXISTS online_shope;
 
-CREATE DATABASE online_shope DEFAULT CHARACTER SET utf8;
+CREATE DATABASE IF NOT EXISTS online_shope DEFAULT CHARACTER SET utf8;
 
 USE online_shope;
 
