@@ -1,0 +1,3 @@
+https://www.tutorialspoint.com/servlets/servlets-first-example.htm
+
+http://www.technicalkeeda.com/servlet-jsp-tutorials/servlet-jsp-hello-world-example
