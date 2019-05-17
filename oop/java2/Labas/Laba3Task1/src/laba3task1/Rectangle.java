@@ -36,12 +36,27 @@ public class Rectangle {
     void move(int dx, int dy) {
     }
 
-    void minSquare() {
+    int minSquare(int x1, int y1, int x2, int y2) {
+        this.x1 = x1;
+        this.y1 = y1;
+        this.x2 = x2;
+        this.y2 = y2;
+        width = x2 - x1;
+        height = y2 - y1;
+        int square = width * height;
+        return square;
     }
 
+    int minSquare(int width, int height) {
+        this.width = x2 - x1;
+        this.height = y2 - y1;
+        int square = width * height;
+        return square;
+    }
+
+    @Override
     public String toString() {
         return "(" + x1 + " " + y1 + "), "
                 + "(" + x2 + " " + y2 + ")";
     }
-
 }
