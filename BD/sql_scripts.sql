@@ -47,7 +47,7 @@ CREATE TABLE  IF NOT EXISTS orders (
 id INT NOT NULL AUTO_INCREMENT,
 data_sold TIMESTAMP NOT NULL,
 product_id INT NOT NULL,
-quantity INT DEFAULT 0,
+quantity INT UNSIGNED DEFAULT 0,
 PRIMARY KEY (id),
 CONSTRAINT fk_orders_product
     FOREIGN KEY (product_id)
