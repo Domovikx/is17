@@ -25,33 +25,22 @@ PRIMARY KEY (id));
 /*Таблица поставки*/
 /*DROP TABLE IF EXISTS supply;*/
 CREATE TABLE  IF NOT EXISTS supply (
-id INT NOT NULL AUTO_INCREMENT,
 supplier_id INT NOT NULL,
+product_id INT NOT NULL,
 data_supply TIMESTAMP NOT NULL,
-amount DECIMAL (15, 2) NOT NULL,
-PRIMARY KEY (id),
+quantity INT DEFAULT 0,
+PRIMARY KEY (supplier_id, product_id),
 CONSTRAINT fk_supply_supplier
     FOREIGN KEY (supplier_id)
     REFERENCES supplier (id)
     ON DELETE RESTRICT
+    ON UPDATE CASCADE,
+CONSTRAINT fk_supply_product
+    FOREIGN KEY (product_id)
+    REFERENCES product (id)
+    ON DELETE RESTRICT
     ON UPDATE CASCADE);
-    
-    CREATE TABLE  IF NOT EXISTS supply_details (
-    supply_id INT NOT NULL,
-    product_id INT NOT NULL,
-    quantity INT DEFAULT 0,
-    PRIMARY KEY (supply_id, product_id),
-    CONSTRAINT fk_supply_details_supply
-		FOREIGN KEY (supply_id)
-		REFERENCES supply (id)
-		ON DELETE RESTRICT
-		ON UPDATE RESTRICT,
-    CONSTRAINT fk_supply_details_product
-		FOREIGN KEY (product_id)
-		REFERENCES product(id)
-		ON DELETE RESTRICT
-		ON UPDATE RESTRICT);
-    
+
 /*Таблица заказов*/
 /*DROP TABLE IF EXISTS orders;*/
 CREATE TABLE  IF NOT EXISTS orders (
