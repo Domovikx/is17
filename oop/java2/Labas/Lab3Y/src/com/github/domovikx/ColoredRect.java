@@ -13,7 +13,7 @@ public class ColoredRect extends DrawRect {
 
     @Override
     public String toString() {
-        return MessageFormat.format("{0}, in: {1}", super.toString(), inColor);
+        return MessageFormat.format("{0}, цвет прямоугольника: {1}", super.toString(), inColor);
     }
 
 }

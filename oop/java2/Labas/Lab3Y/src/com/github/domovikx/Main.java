@@ -19,11 +19,12 @@ public class Main {
         System.out.println(rectangle1.minSquare(rectangle2));
 
         try (Scanner s = new Scanner(System.in)) {
-            System.out.print("Enter in color and press Enter: ");
+            System.out.print("Введите цвет прямоугольника: ");
             String in = s.next();
-            System.out.print("Enter out color and press Enter: ");
+            System.out.print("Введите цвет границы прямоугольника: ");
             String out = s.next();
             ColoredRect coloredRect = new ColoredRect();
+            coloredRect.inCons();
             coloredRect.draw(in, out);
             System.out.println(coloredRect);
         }

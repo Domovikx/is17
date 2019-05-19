@@ -1,6 +1,7 @@
 package com.github.domovikx;
 
 import java.text.MessageFormat;
+import java.util.Scanner;
 
 public class Rectangle {
 
@@ -34,6 +35,19 @@ public class Rectangle {
 
     public Rectangle minSquare(Rectangle other) {
         return this.square() < other.square() ? this : other;
+    }
+
+    public void inCons() {
+        try (Scanner scanner = new Scanner(System.in)) {
+            this.x1 = Integer.parseInt(scanner.next());
+            this.y1 = Integer.parseInt(scanner.next());
+            this.x2 = Integer.parseInt(scanner.next());
+            this.y2 = Integer.parseInt(scanner.next());
+        } catch (NumberFormatException e) {
+            System.out.println("Неверное число " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Возникла ошибка " + e.getMessage());
+        }
     }
 
     @Override
