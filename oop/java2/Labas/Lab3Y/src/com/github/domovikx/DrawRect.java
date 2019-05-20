@@ -12,6 +12,6 @@ public class DrawRect extends Rectangle {
 
     @Override
     public String toString() {
-        return MessageFormat.format("{0}, out: {1}", super.toString(), outColor);
+        return MessageFormat.format("{0}, цвет границы: {1}", super.toString(), outColor);
     }
 }
