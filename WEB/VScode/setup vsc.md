@@ -1,7 +1,7 @@
 # Настройка VS Code
-## Где скачать VS Code :
+## где скачать vs code :
 Страница загрузки : [Download Visual Studio Code](https://code.visualstudio.com/download)
-## Мои дополнения :
+## дополнения для vsc :
 1. [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - 
 Automatically add HTML/XML close tag, same as Visual Studio IDE or Sublime Text <br>
 0. [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) - 
@@ -27,4 +27,17 @@ Launch a development local Server with live reload feature for static & dynamic 
 0. [Log Wrapper](https://marketplace.visualstudio.com/items?itemName=chrisvltn.log-wrapper-for-vscode) -
 Prints a debug command for the selected code and language <br>
 0. [VScode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) - 
-Icons for Visual Studio Code
+Icons for Visual Studio Code <br>
+## дополнения для chrome:
+1. [PerfectPixel by WellDoneCode](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi) -
+Это расширение помогает Вам разрабатывать сайт с попиксельной точностью <br>
+0. [Page Ruler](https://chrome.google.com/webstore/detail/page-ruler/emliamioobfffbgcfdchabfibonehkme) - 
+Нарисовать линейку, чтобы получить пиксельные размеры и позиционирование, и измерить элементы на любой веб-странице <br>
+0. [ImTranslator: Переводчик, Словарь, Голос](https://chrome.google.com/webstore/detail/imtranslator-translator-d/noaijdpnepcgjemiklgfkcfbkokogabh) - 
+ImTranslator выполняет перевод выделенного текста (5,000 знаков), слов (Dictionary), фраз и веб-страниц на 91 языке, используя 3 разных переводчика (Google, Microsoft Bing, Translator) <br>
+0. [Google Переводчик](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb) - 
+С помощью этого расширения, разработанного командой Google Переводчика, можно быстро переводить веб-страницы <br>
+0. [Joxi Сделай скриншот экрана](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi) - 
+Быстрое приложение для скриншотов в браузере. Со скроллом страницы <br>
+0. [Eye Dropper](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka) - 
+Eye Dropper - это расширение с открытым исходным кодом, которое позволяет выбирать цвета на веб-страницах, в палитре цветов и в личной истории цветов <br>
