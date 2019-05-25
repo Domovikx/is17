@@ -1,6 +1,8 @@
 $color_bg: #d4bda5;
 $color_black: #6f2c17bb;
 $color_white: #d4bda599;
+$color_hover: #ffa60088;
+$color_activ: #ffa600ee;
 $cell_size: 80px;
 $discription: 40px repeat(8, $cell_size) 40px;
 
@@ -68,14 +70,20 @@ body {
           height: $cell_size;
           width: $cell_size;
           font-size: 0;
-          background-color: $color_white;
+          background: $color_white;
         }
+        div:nth-child(n):hover {
+          background: $color_hover;
+        }
+        div:nth-child(n):active {
+            background: $color_activ;
+          }
       }
       div:nth-child(odd) div:nth-child(even) {
-        background-color: $color_black;
+        background: $color_black;
       }
       div:nth-child(even) div:nth-child(odd) {
-        background-color: $color_black;
+        background: $color_black;
       }
     }
   }

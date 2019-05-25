@@ -98,14 +98,22 @@ body {
   height: 80px;
   width: 80px;
   font-size: 0;
-  background-color: #d4bda599;
+  background: #d4bda599;
+}
+
+.wrapper .chess .chess_field .chess_field__row div:nth-child(n):hover {
+  background: #ffa60088;
+}
+
+.wrapper .chess .chess_field .chess_field__row div:nth-child(n):active {
+  background: #ffa600ee;
 }
 
 .wrapper .chess .chess_field div:nth-child(odd) div:nth-child(even) {
-  background-color: #6f2c17bb;
+  background: #6f2c17bb;
 }
 
 .wrapper .chess .chess_field div:nth-child(even) div:nth-child(odd) {
-  background-color: #6f2c17bb;
+  background: #6f2c17bb;
 }
 /*# sourceMappingURL=style.css.map */
