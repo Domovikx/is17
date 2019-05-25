@@ -1,0 +1,82 @@
+$color_bg: #d4bda5;
+$color_black: #6f2c17bb;
+$color_white: #d4bda599;
+$cell_size: 80px;
+$discription: 40px repeat(8, $cell_size) 40px;
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, monospace;
+  font-size: 20px;
+  font-weight: 600;
+  color: $color_black;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+
+  .chess {
+    display: inline-grid;
+    background-color: $color_bg;
+    background-image: url(assets/img/purty_wood-1024x1024.png);
+    grid-template: $discription/$discription;
+
+    div {
+      place-items: center;
+    }
+
+    .description_top {
+      display: grid;
+      grid-template-columns: $discription;
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .description_bottom {
+      display: grid;
+      grid-template-columns: $discription;
+      grid-column: 1;
+      grid-row: 10;
+    }
+    .description_left {
+      display: grid;
+      grid-template-rows: $discription;
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .description_right {
+      display: grid;
+      grid-template-rows: $discription;
+      grid-column: 10;
+      grid-row: 1;
+    }
+
+    .chess_field {
+      grid-column: 2 / span 8;
+      grid-row: 2 / span 8;
+      outline: 2px solid $color_black;
+      outline-offset: -2px;
+    }
+
+    .chess_field {
+      display: grid;
+      .chess_field__row {
+        display: flex;
+        div {
+          height: $cell_size;
+          width: $cell_size;
+          font-size: 0;
+          background-color: $color_white;
+        }
+      }
+      div:nth-child(odd) div:nth-child(even) {
+        background-color: $color_black;
+      }
+      div:nth-child(even) div:nth-child(odd) {
+        background-color: $color_black;
+      }
+    }
+  }
+}

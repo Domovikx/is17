@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, monospace;
+  font-size: 20px;
+  font-weight: 600;
+  color: #6f2c17bb;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.wrapper .chess {
+  display: -ms-inline-grid;
+  display: inline-grid;
+  background-color: #d4bda5;
+  background-image: url(assets/img/purty_wood-1024x1024.png);
+  -ms-grid-rows: 40px (80px)[8] 40px;
+  -ms-grid-columns: 40px (80px)[8] 40px;
+      grid-template: 40px repeat(8, 80px) 40px/40px repeat(8, 80px) 40px;
+}
+
+.wrapper .chess div {
+  place-items: center;
+}
+
+.wrapper .chess .description_top {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40px (80px)[8] 40px;
+      grid-template-columns: 40px repeat(8, 80px) 40px;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.wrapper .chess .description_bottom {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40px (80px)[8] 40px;
+      grid-template-columns: 40px repeat(8, 80px) 40px;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 10;
+  grid-row: 10;
+}
+
+.wrapper .chess .description_left {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 40px (80px)[8] 40px;
+      grid-template-rows: 40px repeat(8, 80px) 40px;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.wrapper .chess .description_right {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 40px (80px)[8] 40px;
+      grid-template-rows: 40px repeat(8, 80px) 40px;
+  -ms-grid-column: 10;
+  grid-column: 10;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.wrapper .chess .chess_field {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 8;
+  grid-column: 2 / span 8;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 8;
+  grid-row: 2 / span 8;
+  outline: 2px solid #6f2c17bb;
+  outline-offset: -2px;
+}
+
+.wrapper .chess .chess_field {
+  display: -ms-grid;
+  display: grid;
+}
+
+.wrapper .chess .chess_field .chess_field__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .chess .chess_field .chess_field__row div {
+  height: 80px;
+  width: 80px;
+  font-size: 0;
+  background-color: #d4bda599;
+}
+
+.wrapper .chess .chess_field div:nth-child(odd) div:nth-child(even) {
+  background-color: #6f2c17bb;
+}
+
+.wrapper .chess .chess_field div:nth-child(even) div:nth-child(odd) {
+  background-color: #6f2c17bb;
+}
+/*# sourceMappingURL=style.css.map */
