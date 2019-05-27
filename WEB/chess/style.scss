@@ -1,17 +1,21 @@
 $color_bg: #d4bda5;
 $color_black: #6f2c17bb;
 $color_white: #d4bda599;
-$color_hover: #ffa60088;
-$color_activ: #ffa600ee;
+$color_hover: #967d69;
+$color_activ: #967d69cc;
 $cell_size: 80px;
+$font_size: 20px;
 $discription: 40px repeat(8, $cell_size) 40px;
+
+// Разобрать как делать проценты от цвета для btg-activ
+// https://stackoverrun.com/ru/q/2376782 -  тут способы как написать доску
 
 body {
   margin: 0;
   font-family: Arial, Helvetica, monospace;
-  font-size: 20px;
+  font-size: $font_size;
   font-weight: 600;
-  color: $color_black;
+  //   color: $color_black;
   text-transform: uppercase;
 }
 
@@ -23,8 +27,12 @@ body {
   .chess {
     display: inline-grid;
     background-color: $color_bg;
-    background-image: url(assets/img/purty_wood-1024x1024.png);
+    background-image: url(assets/img/bg_fone_003.jpg);
+    background-size: cover;
     grid-template: $discription/$discription;
+    color: $color_white;
+    outline: 3px solid $color_white;
+    outline-offset: -3px;
 
     div {
       place-items: center;
@@ -33,37 +41,49 @@ body {
     .description_top {
       display: grid;
       grid-template-columns: $discription;
-      grid-column: 1;
+      grid-column: 1 / span 10;
       grid-row: 1;
+      transform: rotate(180deg);
     }
     .description_bottom {
       display: grid;
       grid-template-columns: $discription;
-      grid-column: 1;
+      grid-column: 1 / span 10;
       grid-row: 10;
     }
     .description_left {
       display: grid;
       grid-template-rows: $discription;
       grid-column: 1;
-      grid-row: 1;
+      grid-row: 1 / span 10;
     }
     .description_right {
       display: grid;
       grid-template-rows: $discription;
       grid-column: 10;
-      grid-row: 1;
+      grid-row: 1 / span 10;
+      transform: rotate(180deg);
+    }
+
+    .description_top,
+    .description_bottom,
+    .description_left,
+    .description_right {
+      user-select: none;
     }
 
     .chess_field {
       grid-column: 2 / span 8;
       grid-row: 2 / span 8;
-      outline: 2px solid $color_black;
-      outline-offset: -2px;
+      outline: 3px solid $color_white;
+      // outline-offset: -2px;
+      background-image: url(assets/img/purty_wood-1024x1024.png);
+      background-size: cover;
     }
 
     .chess_field {
       display: grid;
+      user-select: none;
       .chess_field__row {
         display: flex;
         div {
@@ -76,8 +96,8 @@ body {
           background: $color_hover;
         }
         div:nth-child(n):active {
-            background: $color_activ;
-          }
+          background: $color_activ;
+        }
       }
       div:nth-child(odd) div:nth-child(even) {
         background: $color_black;
