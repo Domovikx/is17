@@ -1,6 +1,8 @@
 # Настройка VS Code
+
 ## где скачать vs code :
 Страница загрузки : [Download Visual Studio Code](https://code.visualstudio.com/download)
+
 ## дополнения для vsc :
 1. [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - 
 Automatically add HTML/XML close tag, same as Visual Studio IDE or Sublime Text <br>
@@ -28,6 +30,14 @@ Launch a development local Server with live reload feature for static & dynamic 
 Prints a debug command for the selected code and language <br>
 0. [VScode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) - 
 Icons for Visual Studio Code <br>
+
+### SCSS
+1. [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) - 
+Расширение VSCode, которое поможет вам скомпилировать / преобразовать ваши файлы SASS / SCSS в файлы CSS в режиме реального времени с перезагрузкой браузера.<br>
+0. [Sass](https://marketplace.visualstudio.com/items?itemName=robinbentley.sass-indented) - Подсветка синтаксиса с отступом Sass, автозаполнение и фрагменты для VSCode<br>
+0. [SCSS Formatter](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter) - 
+Расширение кода Visual Studio для форматирования SCSS<br>
+
 ## дополнения для chrome:
 1. [PerfectPixel by WellDoneCode](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi) -
 Это расширение помогает Вам разрабатывать сайт с попиксельной точностью <br>
