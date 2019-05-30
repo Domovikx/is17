@@ -1,0 +1,68 @@
+$color_text: #202124;
+
+$btn_dark_bg: #dfe1e5;
+$btn_dark_hover: #d7d9dd;
+
+$btn_light_bg: #f1f3f4;
+$btn_light_hover: #e8eaeb;
+
+$btn_color_text: white;
+$btn_color_bg: #4285f4;
+$btn_color_hover: #4d8bf1;
+
+$input_br_color: #d9d9d9;
+
+.calc {
+  margin: 0 auto;
+  max-width: 600px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 50px;
+
+  input {
+    grid-column: 1 / span 4;
+    text-align: end;
+    font-size: 36px;
+    padding: 0px 8px 0px 0px;
+    outline: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    color: $color_text;
+  }
+
+  button {
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    user-select: none;
+    color: $color_text;
+  }
+  button:active {
+    box-shadow: 0 1px 1px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  }
+
+  .btn_dark {
+    background-color: $btn_dark_bg;
+  }
+  .btn_dark:hover {
+    background-color: $btn_dark_hover;
+  }
+
+  .btn_light {
+    background-color: $btn_light_bg;
+  }
+  .btn_light:hover {
+    background-color: $btn_light_hover;
+  }
+
+  .btn_color {
+    background: $btn_color_bg;
+    color: $btn_color_text;
+    font-weight: 600;
+  }
+  .btn_color:hover {
+    background: $btn_color_hover;
+  }
+}

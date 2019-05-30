@@ -1,53 +1,67 @@
-body>form {
-    margin: 0 auto;
-    max-width: 600px;
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 50px;
+.calc {
+  margin: 0 auto;
+  max-width: 600px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 5px;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 50px;
 }
 
-button {
-    font-size: 30px;
-    color: #202124;
-    background-color: #dfe1e5;
-    border: none;
-    border-radius: 10px;
-    outline: none;
-    user-select: none; 
+.calc input {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / span 4;
+  text-align: end;
+  font-size: 36px;
+  padding: 0px 8px 0px 0px;
+  outline: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  color: #202124;
 }
 
-button:hover {
-    background: #d7d9dd;
+.calc button {
+  font-size: 30px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #202124;
 }
 
-button:active {
-    box-shadow: 0 1px 1px 0 rgba(60, 64, 67, 0.30), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+.calc button:active {
+  -webkit-box-shadow: 0 1px 1px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 1px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
 
-button:nth-child(n+6):nth-child(-n+8), button:nth-child(n+10):nth-child(-n+12), button:nth-child(n+14):nth-child(-n+16), button:nth-child(n+18):nth-child(-n+19) {
-    background-color: #f1f3f4;
+.calc .btn_dark {
+  background-color: #dfe1e5;
 }
 
-button:nth-child(n+6):nth-child(-n+8):hover, button:nth-child(n+10):nth-child(-n+12):hover, button:nth-child(n+14):nth-child(-n+16):hover, button:nth-child(n+18):nth-child(-n+19):hover {
-    background-color: #e8eaeb;
+.calc .btn_dark:hover {
+  background-color: #d7d9dd;
 }
 
-button:nth-child(20) {
-    background: #4285f4;
-    color: white;
+.calc .btn_light {
+  background-color: #f1f3f4;
 }
 
-button:nth-child(20):active {
-    background: #4d8bf1;
+.calc .btn_light:hover {
+  background-color: #e8eaeb;
 }
 
-form>input {
-    grid-column: 1 / span 4;
-    text-align: end;
-    font-size: 36px;
-    padding: 0px 8px 0px 0px;
-    outline: none;
-    border: 1px solid #d9d9d9;
-    border-radius: 10px;
+.calc .btn_color {
+  background: #4285f4;
+  color: white;
+  font-weight: 600;
 }
+
+.calc .btn_color:hover {
+  background: #4d8bf1;
+}
+/*# sourceMappingURL=style.css.map */

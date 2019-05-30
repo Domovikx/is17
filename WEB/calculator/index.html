@@ -5,42 +5,39 @@
   <meta charset="UTF-8">
   <link href="style.css" rel="stylesheet">
 
-  <title>Ilya Ivanovskiy - calculator</title>
+  <title>Calculator</title>
 </head>
 
 <body>
 
-  <form>
-
+  <div class="calc">
     <input type="text" value="0">
 
-    <button value="(">(</button>
-    <button value=")">)</button>
-    <button value="%">%</button>
-    <button value="AC">AC</button>
+    <button class="btn_dark" value="(">(</button>
+    <button class="btn_dark" value=")">)</button>
+    <button class="btn_dark" value="%">%</button>
+    <button class="btn_dark" value="AC">AC</button>
 
-    <button value="7">7</button>
-    <button value="8">8</button>
-    <button value="9">9</button>
-    <button value="/">/</button>
+    <button class="btn_light" value="7">7</button>
+    <button class="btn_light" value="8">8</button>
+    <button class="btn_light" value="9">9</button>
+    <button class="btn_dark" value="/">/</button>
 
-    <button value="4">4</button>
-    <button value="5">5</button>
-    <button value="6">6</button>
-    <button value="*">x</button>
+    <button class="btn_light" value="4">4</button>
+    <button class="btn_light" value="5">5</button>
+    <button class="btn_light" value="6">6</button>
+    <button class="btn_dark" value="*">x</button>
 
-    <button value="1">1</button>
-    <button value="2">2</button>
-    <button value="3">3</button>
-    <button value="-">-</button>
+    <button class="btn_light" value="1">1</button>
+    <button class="btn_light" value="2">2</button>
+    <button class="btn_light" value="3">3</button>
+    <button class="btn_dark" value="-">-</button>
 
-    <button value="0">0</button>
-    <button value=".">.</button>
-    <button value="=">=</button>
-    <button value="+">+</button>
-
-    </div>
-  </form>
+    <button class="btn_light" value="0">0</button>
+    <button class="btn_light" value=".">.</button>
+    <button class="btn_color" value="=">=</button>
+    <button class="btn_dark" value="+">+</button>
+  </div>
 
   <script src="script.js"></script>
 </body>
