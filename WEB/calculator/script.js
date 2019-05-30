@@ -1,12 +1,24 @@
-﻿// function sum() {
-// 	let str = document.getElementById('str').value;
-// 	let result = eval(str);
-// 	console.log(result);
-// 	document.getElementById('result').innerHTML = result;
-// }
+﻿document.getElementById("calc").addEventListener("click", (e) => {
+    const input = document.getElementById('calc__input').value;
+    const target = e.target.value;
 
-// document.getElementById('select').addEventListener("change", (e) => {
-// 	let val = e.target.value;
-// 	document.getElementById('figure-circle').style.backgroundColor = val;
-// });
+    if (input === target) return;
 
+    if (target === "=") {
+        const result = eval(input);
+        document.getElementById('calc__input').value = result;
+        return;
+    }
+
+    if (target === "C") {
+        document.getElementById('calc__input').value = "";
+        return;
+    }
+
+    if (target === "back") {
+        document.getElementById('calc__input').value = input.slice(0, -1);
+        return;
+    }
+
+    document.getElementById('calc__input').value += target;
+});
