@@ -1,11 +1,14 @@
 ﻿document.getElementById("calc").addEventListener("click", (e) => {
-    const input = document.getElementById('calc__input').value;
+    let input = document.getElementById('calc__input').value;
     const target = e.target.value;
 
     if (input === target | target === undefined) return;
 
     if (target === "=") {
+        if (input[0] === '0') input = input.substring(1);
+
         const result = eval(input);
+        if (result === undefined) return;
         document.getElementById('calc__input').value = result;
         return;
     }
