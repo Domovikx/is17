@@ -12,6 +12,12 @@ $btn_color_hover: #4d8bf1;
 
 $input_br_color: #d9d9d9;
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 .calc {
   margin: 0 auto;
   max-width: 600px;
@@ -21,7 +27,14 @@ $input_br_color: #d9d9d9;
   grid-auto-rows: 50px;
   @media only screen and (min-width: 320px) and (max-width: 480px) {
     grid-auto-rows: auto;
-    height: calc(100vh - 20px);
+    min-height: 100%;
+    // &:fullscreen:before {
+    //   content: "Fullscreen mode";
+    // }
+    &:fullscreen {
+      // background-color: pink;
+      min-height: 100%;
+    }
   }
 
   input {
@@ -33,6 +46,9 @@ $input_br_color: #d9d9d9;
     border: 1px solid #d9d9d9;
     border-radius: 10px;
     color: $color_text;
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+      // input:read-only;
+    }
   }
 
   button {
