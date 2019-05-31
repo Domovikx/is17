@@ -20,6 +20,18 @@ body {
     grid-auto-rows: auto;
     min-height: 100%;
   }
+  .calc:-webkit-full-screen {
+    min-height: 100%;
+  }
+  .calc:-moz-full-screen {
+    min-height: 100%;
+  }
+  .calc:-ms-fullscreen {
+    min-height: 100%;
+  }
+  .calc:fullscreen {
+    min-height: 100%;
+  }
 }
 
 .calc input {
