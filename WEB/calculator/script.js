@@ -1,4 +1,14 @@
-﻿document.getElementById("calc").addEventListener("click", (e) => {
+function fullScreen() {
+    var el = document.getElementById('calc'); // Получаем элемент
+    if (el.webkitRequestFullscreen) el.webkitRequestFullscreen(); // Chrome, Opera, Safari
+    else if (el.mozRequestFullScreen) el.mozRequestFullScreen(); // Firefox
+    else if (el.msRequestFullscreen) el.msRequestFullscreen(); // Internet Explorer, Edge
+    else if (el.requestFullscreen) el.requestFullscreen(); // Стандарт
+}
+
+document.getElementById("calc").addEventListener("click", (e) => {
+
+    fullScreen();
     let input = document.getElementById('calc__input').value;
     const target = e.target.value;
 
