@@ -9,6 +9,12 @@
   grid-auto-rows: 50px;
 }
 
+@media (max-width: 600px) {
+  .calc {
+    grid-auto-rows: 100px;
+  }
+}
+
 .calc input {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
