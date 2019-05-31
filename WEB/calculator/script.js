@@ -8,7 +8,7 @@ function fullScreen() {
 
 document.getElementById("calc").addEventListener("click", (e) => {
 
-    fullScreen();
+    //fullScreen();
     let input = document.getElementById('calc__input').value;
     const target = e.target.value;
 
