@@ -6,11 +6,36 @@ function fullScreen() {
     else if (el.requestFullscreen) el.requestFullscreen(); // Стандарт
 }
 
+
+window.onload = function () {
+    console.log('window.onload');
+    let input = document.getElementById('calc__input').value;
+    if (input === "undefined") {
+        console.log('test undefined');
+        document.getElementById('calc__input').value = "";
+    }
+    if (input === "") {
+        let l = localStorage["calcInputValue"];
+        document.getElementById('calc__input').value = localStorage["calcInputValue"];
+    }
+};
+
+
+window.onunload = function () {
+    console.log('window.onunload');
+    let input = document.getElementById('calc__input').value;
+    console.log('input', input);
+    localStorage.setItem("calcInputValue", input);
+};
+
+
+
 document.getElementById("calc").addEventListener("click", (e) => {
 
-    //fullScreen();
+    // fullScreen();
     let input = document.getElementById('calc__input').value;
     const target = e.target.value;
+
 
     if (input === target | target === undefined) return;
 
@@ -35,3 +60,13 @@ document.getElementById("calc").addEventListener("click", (e) => {
 
     document.getElementById('calc__input').value += target;
 });
+
+
+function loadLocalStorage() {
+    let input = document.getElementById('calc__input').value;
+    if (input === "") {
+        let l = localStorage["calcInputValue"];
+        document.getElementById('calc__input').value = localStorage["calcInputValue"];
+    }
+}
+loadLocalStorage();
