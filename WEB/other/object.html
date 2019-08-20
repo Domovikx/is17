@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <ul id="ul">
+    <li>пункт 1</li>
+    <li>пункт 2</li>
+    <li>пункт 3</li>
+    <li>пункт 4</li>
+    <li>пункт 5</li>
+  </ul>
+
+  <script>
+    let ul = document.getElementById('ul');
+    ul.addEventListener('click', addText);
+    function addText() {
+      event.target.innerHTML = event.target.innerHTML + ' !';
+    }
+  </script>
+
+<!-- <style>
+    body * {
+      margin: 10px;
+      border: 1px solid blue;
+    }
+  </style>
+  
+  <form>FORM
+    <div>DIV
+      <p>P</p>
+    </div>
+  </form>
+  
+  <script>
+    for(let elem of document.querySelectorAll('*')) {
+      elem.addEventListener("click", e => alert(`Capturing: ${elem.tagName}`), true);
+      elem.addEventListener("click", e => alert(`Bubbling: ${elem.tagName}`));
+    }
+  </script> -->
+
+
+
+</body>
+
+</html>
