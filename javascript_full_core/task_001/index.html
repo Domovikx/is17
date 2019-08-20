@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Примеры JS</title>
+</head>
+
+<body>
+    <h2>Таблица факториалов</h2>
+    <script>
+        var fact = 1;
+        for (i = 1; i < 10; i++) {
+            fact = fact * i;
+            document.write(`<div> ${i}! = ${fact} </div>`);
+        }
+    </script>
+
+    <h2>Числа Фибоначчи</h2>
+    <script>
+        for (i = 0, j = 1, k = 0, fib = 0; i < 50; i++, fib = j + k, j = k, k = fib) {
+            document.write(`<div> Fibonacci (${i}) = ${fib} </div>`);
+        }
+    </script>
+</body>
+
+</html>
