@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prototypes</title>
+</head>
+
+<body>
+    <script>
+        document.write(`<h1> Первый этап </h1>`)
+        const animal = {
+            say() {
+                document.write(`<h2> voice ${this.voice} </h2>`)
+            }
+        }
+        const dog = {
+            name: 'dog',
+            voice: 'woof',
+        }
+        Object.setPrototypeOf(dog, animal)
+        const cat = {
+            name: 'cat',
+            voice: 'meaw',
+        }
+        Object.setPrototypeOf(cat, animal)
+        cat.say()
+        dog.say()
+    </script>
+
+    <script>
+        document.write(`<h1> Второй этап через Object.create() </h1>`)
+        const animal_2 = {
+            say() {
+                document.write(`<h2> voice  ${this.voice} </h2>`)
+            }
+        }
+
+        const dog_2 = Object.create(animal_2)
+        dog_2.name = 'dog'
+        dog_2.voice = 'woof'
+
+        const cat_2 = Object.create(animal_2)
+        cat_2.name = 'dog'
+        cat_2.voice = 'meaw'
+
+        cat_2.say()
+        dog_2.say()
+    </script>
+
+    <script>
+        document.write(`<h1> Третий этап выносим логику </h1>`)
+        const animal_3 = {
+            say() {
+                document.write(`<h2> voice  ${this.voice} </h2>`)
+            }
+        }
+
+        function animalConstructor(name, voice) {
+            const resault = Object.create(animal_3)
+            resault.name = name
+            resault.voice = voice
+            return resault
+        }
+        const dog_3 = animalConstructor('dog', 'woof')
+        const cat_3 = animalConstructor('cat', 'meaw')
+
+        cat_3.say()
+        dog_3.say()
+    </script>
+
+    <script>
+        document.write(`<h1> Четвертый используем new </h1>`)
+
+        function Animal(name, voice) {
+            this.name = name
+            this.voice = voice
+        }
+        Animal.prototype.say = function () {
+            document.write(`<h2> ${this.name} voice ${this.voice} </h2>`)
+        }
+
+        const dog_4 = new Animal('dog', 'woof')
+        const cat_4 = new Animal('cat', 'meaw')
+
+        cat_4.say()
+        dog_4.say()
+    </script>
+
+    <script>
+        const objectFree = Object.create(null) // создаст объект без прототипа
+        console.log('objectFree :', objectFree);
+    </script>
+
+    <script>
+        document.write(`<h1> переписываем всё через класс </h1>`)
+        class Animal_5 {
+            constructor(name, voice) {
+                this.name = name
+                this.voice = voice
+            }
+            say() {
+                document.write(`<h2> ${this.name} voice ${this.voice} </h2>`)
+            }
+        }
+        class Bird extends Animal_5 {
+            constructor(name, voice) {
+                super(name, voice)
+                super.say() // можем вызвать метод родителя
+            }
+            // новый метод
+            canFly() {
+                document.write(`<h2> Птица может летать </h2>`)
+            }
+            // переопределение метода
+            say() {
+                document.write(`<h2> Прицы не любят разговаривать </h2>`)
+            }
+        }
+        const duck = new Bird('Утка', 'кря-кря')
+        duck.say()
+        duck.canFly()
+    </script>
+
+    <!-- Делегирование событий и остановка
+    event.preventDefault();
+	event.stopPropagation();
+    -->
+    <div onclick="alert('div')">
+        <ul onclick="alert(event.target.title); event.stopPropagation();">
+            <li title="One">One</li>
+            <li title="Two">Two</li>
+            <li title="Three">Three</li>
+        </ul>
+    </div>
+</body>
+
+</html>
